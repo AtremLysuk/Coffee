@@ -1,0 +1,168 @@
+
+
+
+.header {
+    // position: relative;
+    background-image: url(@img/header/headerbg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 1366 / 768;
+
+    &__top {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 115px;
+    }
+
+    &__top-menu {
+        
+    }
+
+    &__top-buttons {
+    }
+
+    &__content {
+        max-width: 527px;
+        @include adaptiveValue("padding-bottom", 100, 50);
+    }
+
+    &__content-descr {
+        font-weight: 500;
+        @include adaptiveValue("font-size", 22, 18);;
+        color: $whiteColor;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 50, 30);
+        }
+    }
+
+    &__content-title {
+        font-family: "Clicker Script", sans-serif;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 220, 120);
+        color: $whiteColor;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 15);
+        }
+    }
+
+    &__content-text {
+        font-weight: 400;
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: 1.7;
+        color: $whiteColor;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__content-btn {
+        padding-bottom: 30px;
+    }
+}
+._icon-logo{
+    @media (max-width:$mobile){
+        z-index: 10; 
+    }
+    &::before{
+        color: $whiteColor;
+        transition: all 0.4s ease;
+        @include adaptiveValue("font-size", 40, 24);
+    }
+}
+.menu {
+
+    &__icon {
+
+    }
+
+    &__body {
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptiveValue("gap", 60, 20);
+        @media (min-width:$tablet){
+
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        color: $whiteColor;
+        transition: color 0.4s ease;
+        @media(min-width: 768px) {
+            font-size: 14px;
+        }
+        &:hover{
+            color: #f9c06a;
+        }
+    }
+}
+.icon__menu{
+    
+    @media (max-width:$mobile){
+        order: 1; 
+    }
+}
+.top-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 35, 10);
+
+    @media (max-width:$mobile){
+        z-index: 10; 
+    }
+
+    @media(max-width: 470px) {
+        transform: translateY(-50px);
+    }
+}
+.top-buttons-left {
+    font-weight: 500;
+    font-size: 14px;
+    color: $whiteColor;
+    transition: color 0.4s ease;
+
+    &:hover{
+        color: #f9c06a;
+    }
+
+
+}
+.top-buttons-rigth {
+    padding: 17px 27px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #1e1e1e;
+    border-radius: 24px;
+    box-shadow: 0 6px 12px 0 rgba(249, 192, 106, 0.22);
+    background-color: #f9c06a;
+    transition: all 0.4s ease;
+
+    @media (max-width:$tablet){
+        padding: 10px 15px;
+    }
+    
+
+    &:hover{
+        background-color: #603809;
+        box-shadow: 0 9px 15px 0 rgba(253, 211, 148, 0.22);
+        color: $whiteColor;
+    }
+
+
+}
+
+
